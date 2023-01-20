@@ -13,6 +13,10 @@ early revision demo of car
 - Two continuous servo motors
 - One 180° limited servo motor
 - Breadboard
+- Two servo motor compatible wheels
+
+#### For wireless use:
+  - Battery with barrel jack adapter
 
 
 
@@ -23,22 +27,26 @@ early revision demo of car
 
 #### Decision Making Structure
 ```python
-ASSUME: diff = distance left of car - distance right of car
-        note: distance refers to distance of closest object detected by HC-SR04 sensor
+ASSUME: diff = distance left of car - distance right of car.
+        note: "distance" refers to the distance of the closest object detected by HC-SR04 sensor.
 
-Object Detected!
-Look Left and Right.
+Object Detected Ahead!
+  ↓
+  Stop.
+  ↓
+  Look Left and Look Right.
   ├── if distance ahead < absolute value of diff:
-  │   └── Move Backward
+  │   └── Move Backward.
   │
   ├── if absolute value of diff < 5 cm:
-  │   └── Move Backward
+  │   └── Move Backward.
   │
   ├── if diff < 0:
+  │   ├── Move Backward
+  │   │   └── Move Right.
+  │   else:
   │   └── Move Backward
-  │       └── Move Right
-  ├── else:
-  │   └── Move Backward
-  │       └── Move Left
-  └── Loop
+  │       └── Move Left.
+  ↓
+Continue Main Loop.
 ```
