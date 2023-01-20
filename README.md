@@ -1,9 +1,13 @@
-# Object Avoiding Arduino Car
+# THE "OAAC" (Object Avoiding Arduino Car)
 
 <div align = "center">
 <img src="https://user-images.githubusercontent.com/98237169/213582819-fb77ec5a-f1be-4fac-a9b3-84206c241eb0.gif" width=80%>
+</div>
 <br />
-early revision demo of car
+
+The **"OAAC"** is a modest, ultrasonic sensor based object avoiding car. It functions as front wheel drive, with two servo-motorized front wheels and two rear balance wheels. The rear wheels are not necessary, but help with durability of the 3D-printed base and reducing friction. I personally used lego wheels, but YMMV. It can not do complex functions such as lane detection, but these functions could be implemented at a later date with the correct hardware modules.
+
+<br />
 </div>
 
 ## Requirements
@@ -14,11 +18,10 @@ early revision demo of car
 - One 180° limited servo motor
 - Breadboard
 - Two servo motor compatible wheels
+- Base to hold breadboard and compatible microcontroller
 
 #### For wireless use:
   - Battery with barrel jack adapter
-
-
 
 ## Features
 - "Smart Direction" decision making
